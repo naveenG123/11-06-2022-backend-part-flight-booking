@@ -1,0 +1,196 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Login/loginuserdetail",
+      "DownstreamScheme": "http",
+      "ServiceName": "LoginManagement",
+      "UpstreamPathTemplate": "/logins",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Login/register",
+      "DownstreamScheme": "http",
+      "ServiceName": "LoginManagement",
+      "UpstreamPathTemplate": "/registers",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Login/registeradmin",
+      "DownstreamScheme": "http",
+      "ServiceName": "LoginManagement",
+      "UpstreamPathTemplate": "/login/register/admin",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Login/loginuserdetail",
+      "DownstreamScheme": "http",
+      "ServiceName": "LoginManagement",
+      "UpstreamPathTemplate": "/loginuserdetails",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Airline",
+      "DownstreamScheme": "http",
+      "ServiceName": "FlightManagementService",
+      "UpstreamPathTemplate": "/Airlines",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Airline/Home/Add",
+      "DownstreamScheme": "http",
+      "ServiceName": "FlightManagementService",
+      "UpstreamPathTemplate": "/Airlines/Add",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Airline/Block",
+      "DownstreamScheme": "http",
+      "ServiceName": "FlightManagementService",
+      "UpstreamPathTemplate": "/Airline/Block",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Inventory/Block",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryManagement",
+      "UpstreamPathTemplate": "/Inventory/delete",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Inventory/Addinventorydetails",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryManagement",
+      "UpstreamPathTemplate": "/Add/inventory",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/Inventory/get",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryManagement",
+      "UpstreamPathTemplate": "/search",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "TestKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/booking/GetAllBooking",
+      "DownstreamScheme": "http",
+      "ServiceName": "bookingManagement",
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/GetAllBooking",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/booking/AddUserDetail",
+      "DownstreamScheme": "http",
+      "ServiceName": "bookingManagement",
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/AddUserDetail",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/booking/add",
+      "DownstreamScheme": "http",
+      "ServiceName": "bookingManagement",
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/add",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/booking/history/{emailid}",
+      "DownstreamScheme": "http",
+      "ServiceName": "bookingManagement",
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/history/{emailid}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/booking/cancel/{pnr}",
+      "DownstreamScheme": "http",
+      "ServiceName": "bookingManagement",
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/cancel/{pnr}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/booking/ticket/{pnr}",
+      "DownstreamScheme": "http",
+      "ServiceName": "bookingManagement",
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/ticket/{pnr}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  //"GlobalConfiguration": {
+  //  "ServiceDiscoveryProvider": {
+  //    "Host": "localhost",
+  //    "Port": "8500",
+  //    "Type": "Consul"
+  //  }
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}
+
+
